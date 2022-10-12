@@ -1,0 +1,11 @@
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+
+[[tool.mypy.overrides]]
+module = "uvicorn"
+ignore_missing_imports = true

@@ -1,0 +1,5 @@
+-c requirements.txt
+black
+mypy
+flake8
+isort
