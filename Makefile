@@ -13,10 +13,10 @@ compile_dev: compile
 install: compile_dev
 	pip-sync .requirements/requirements.txt .requirements/dev-requirements.txt
 
-make black:
+black:
 	isort --profile black app && \
 	black app
 
-make lint:
+lint:
 	mypy app --explicit-package-bases --namespace-packages --config-file=pyproject.toml
-	flake8 app
+	pflake8 app
