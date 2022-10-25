@@ -1,7 +1,13 @@
+from typing import TypeAlias
+
+from sqlalchemy import Column, Integer, Unicode
+
 from app.repository.database import db
 
+DeclarativeBase: TypeAlias = db.Model
 
-class AccountModel(db.Model):
+
+class AccountModel(DeclarativeBase):
     __tablename__ = "accounts"
-    id = db.Column(db.Integer(), primary_key=True)
-    nickname = db.Column(db.Unicode(), default="anonymous")
+    id = Column(Integer(), primary_key=True)
+    nickname = Column(Unicode(), default="anonymous")

@@ -20,3 +20,12 @@ black:
 lint:
 	mypy app --explicit-package-bases --namespace-packages --config-file=pyproject.toml
 	pflake8 app
+
+db_create:
+	psql postgresql://admin:admin@postgres:5432 -c 'create database example_app;'
+
+test_db_create:
+	psql postgresql://admin:admin@postgres:5432 -c 'create database example_app_test;'
+
+migrate:
+	alembic revision -m "create accounts" --autogenerate --head head

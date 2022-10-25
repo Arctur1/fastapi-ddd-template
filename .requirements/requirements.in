@@ -2,3 +2,4 @@ fastapi
 click
 uvicorn
 gino
+psycopg2

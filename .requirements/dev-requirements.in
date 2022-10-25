@@ -3,3 +3,8 @@ black
 mypy
 pyproject-flake8
 isort
+pytest
+pytest-asyncio
+alembic
+
+types-sqlalchemy

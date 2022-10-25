@@ -4,5 +4,8 @@ from pydantic import BaseModel
 
 
 class Account(BaseModel):
-    id: Optional[str]
+    id: Optional[str] = None
     nickname: str
+
+    class Config:
+        orm_mode = True
